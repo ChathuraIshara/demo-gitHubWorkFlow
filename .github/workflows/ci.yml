@@ -8,7 +8,7 @@ on:
     branches: [ main, master ]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
   
     steps:
@@ -19,7 +19,7 @@ jobs:
     # Sample: just print the Python version
     - name: Print Python version
       run:  echo "Hello this is the workflow demo for Python CI with multiple versions"
-
+  
     # Step 2: Set up Python environment
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v4
