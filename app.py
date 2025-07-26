@@ -1,6 +1,7 @@
 """
 Simple Calculator App for GitHub Workflow Demo
 """
+import random
 
 def add(a, b):
     """Add two numbers"""
@@ -66,9 +67,22 @@ def create_beautiful_pattern(n):
     
     return "\n".join(pattern)
 
+
+def print_random_numbers(count=5, min_val=1, max_val=100):
+    """Generate and return random numbers"""
+    random_nums = []
+    for i in range(count):
+        num = random.randint(min_val, max_val)
+        random_nums.append(num)
+    
+    result = f"🎲 Random Numbers ({count} numbers between {min_val}-{max_val}):\n"
+    result += " | ".join(str(num) for num in random_nums)
+    return result
+
 def print_hello_world():
     """Print a simple Hello World message"""
     return "🌍 Hello, World! 🌍"
+
 
 if __name__ == "__main__":
     print("Simple Calculator Demo")
@@ -79,9 +93,19 @@ if __name__ == "__main__":
     print(f"Is 8 even? {is_even(8)}")
     print(f"5! = {factorial(5)}")
     
+
+    print("\n" + "-"*40)
+    print(print_random_numbers())
+    print("-"*40)
+    
+    print("\n" + "-"*40)
+    print(print_random_numbers(3, 1, 10))  # 3 numbers between 1-10
+    print("-"*40)
+
     print("\n" + "-"*30)
     print(print_hello_world())
     print("-"*30)
+
     
     print("\n" + "="*50)
     print("🎨 BEAUTIFUL PATTERN DEMONSTRATION 🎨")
@@ -95,6 +119,12 @@ if __name__ == "__main__":
     print(create_beautiful_pattern(5))
     
     print("\n" + "="*50)
+
+    print("🎲 RANDOM NUMBER GENERATION 🎲")
+    print("="*50)
+    print(print_random_numbers(10, 1, 50))
+
     print("🌍 HELLO WORLD DEMONSTRATION 🌍")
     print("="*50)
     print(print_hello_world())
+
