@@ -41,6 +41,7 @@ def create_beautiful_pattern(n):
     ## to make conflict with other branch
     print("Creating a beautiful pattern...")
     
+    pattern = []
     # Header with decorative border
     pattern.append("═" * (n * 4 + 6))
     pattern.append(f"✨ BEAUTIFUL PATTERN FOR {n} ✨")
