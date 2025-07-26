@@ -37,16 +37,16 @@ def factorial(n):
     return result
 
 def create_beautiful_pattern(n):
-    """Create a beautiful diamond pattern with stars and decorations"""
-    if n <= 0:
-        return "Please enter a positive number!"
+
+
+    ## to make conflict with other branch
+    print("Creating a beautiful pattern...")
     
     pattern = []
-    
     # Header with decorative border
     pattern.append("═" * (n * 4 + 6))
     pattern.append(f"✨ BEAUTIFUL PATTERN FOR {n} ✨")
-    pattern.append("═" * (n * 4 + 6))
+    print("hello how this changes")
     
     # Upper half of diamond
     for i in range(1, n + 1):
@@ -67,6 +67,7 @@ def create_beautiful_pattern(n):
     
     return "\n".join(pattern)
 
+
 def print_random_numbers(count=5, min_val=1, max_val=100):
     """Generate and return random numbers"""
     random_nums = []
@@ -78,6 +79,11 @@ def print_random_numbers(count=5, min_val=1, max_val=100):
     result += " | ".join(str(num) for num in random_nums)
     return result
 
+def print_hello_world():
+    """Print a simple Hello World message"""
+    return "🌍 Hello, World! 🌍"
+
+
 if __name__ == "__main__":
     print("Simple Calculator Demo")
     print(f"5 + 3 = {add(5, 3)}")
@@ -87,6 +93,7 @@ if __name__ == "__main__":
     print(f"Is 8 even? {is_even(8)}")
     print(f"5! = {factorial(5)}")
     
+
     print("\n" + "-"*40)
     print(print_random_numbers())
     print("-"*40)
@@ -94,6 +101,11 @@ if __name__ == "__main__":
     print("\n" + "-"*40)
     print(print_random_numbers(3, 1, 10))  # 3 numbers between 1-10
     print("-"*40)
+
+    print("\n" + "-"*30)
+    print(print_hello_world())
+    print("-"*30)
+
     
     print("\n" + "="*50)
     print("🎨 BEAUTIFUL PATTERN DEMONSTRATION 🎨")
@@ -107,6 +119,12 @@ if __name__ == "__main__":
     print(create_beautiful_pattern(5))
     
     print("\n" + "="*50)
+
     print("🎲 RANDOM NUMBER GENERATION 🎲")
     print("="*50)
     print(print_random_numbers(10, 1, 50))
+
+    print("🌍 HELLO WORLD DEMONSTRATION 🌍")
+    print("="*50)
+    print(print_hello_world())
+
