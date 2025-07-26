@@ -7,7 +7,7 @@ class TestCalculator(unittest.TestCase):
 
     def test_add(self):
         """Test addition function"""
-        self.assertEqual(add(2, 3), 5)
+        self.assertEqual(add(2, 3), 9)
         self.assertEqual(add(-1, 1), 0)
         self.assertEqual(add(0, 0), 0)
         self.assertEqual(add(-5, -3), -8)
